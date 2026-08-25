@@ -73,7 +73,9 @@ Yes! Re-run the script anytime and choose the <b>Restore</b> module to undo spec
 
 If `fuckWin` saved you from annoying updates and unwanted AI features, consider supporting the project:
 
-* * [Support on Ko-fi](https://ko-fi.com/ggyy2008)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R5C425QUEU)
+
+[Support on Ko-fi](https://ko-fi.com/ggyy2008)
 
 ---
 
