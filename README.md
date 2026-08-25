@@ -20,7 +20,7 @@ A lightweight, transparent PowerShell tool to kill forced updates, strip out Cop
 Run PowerShell **as Administrator** and execute:
 
 ```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; irm [https://raw.githubusercontent.com/34892002/fuckWin/main/fuckwin.ps1](https://raw.githubusercontent.com/34892002/fuckWin/main/fuckwin.ps1) | iex
+Set-ExecutionPolicy Bypass -Scope Process -Force; irm https://raw.githubusercontent.com/34892002/fuckWin/main/fuckwin.ps1 | iex
 ```
 
 > **Note**: Fully open-source and transparent. You can inspect the code anytime before running. No background services left behind.
