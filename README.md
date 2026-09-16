@@ -20,13 +20,13 @@ A lightweight, transparent PowerShell tool for managing automatic updates, Windo
 Open **Windows PowerShell as Administrator** and launch the interactive menu:
 
 ```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; irm https://raw.githubusercontent.com/34892002/fuckWin/main/fuckwin.ps1 | iex
+Set-ExecutionPolicy Bypass -Scope Process -Force; irm https://fuckwin.lol/fuckwin.ps1 | iex
 ```
 
-This command downloads and executes the current `main` branch in memory. To inspect the script first or use parameters such as `-Action`, `-UpdateMode`, and `-WhatIf`, download it locally:
+This command follows the `fuckwin.lol` redirect and executes the current `main` branch in memory. To inspect the script first or use parameters such as `-Action`, `-UpdateMode`, and `-WhatIf`, download it locally:
 
 ```powershell
-irm https://raw.githubusercontent.com/34892002/fuckWin/main/fuckwin.ps1 -OutFile fuckwin.ps1
+irm https://fuckwin.lol/fuckwin.ps1 -OutFile fuckwin.ps1
 Set-ExecutionPolicy Bypass -Scope Process -Force
 .\fuckwin.ps1 -Action Updates -UpdateMode Lockdown -WhatIf
 ```

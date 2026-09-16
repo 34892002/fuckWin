@@ -400,7 +400,11 @@ function Show-Menu {
 }
 
 try {
-    if ($Action -eq 'Audit') { Show-Audit; exit 0 }
+    if ($Action -eq 'Audit') {
+        Show-Audit
+        return
+    }
+
     Assert-Windows
     Load-Backup
     if (-not $Force -and $Action -in @('All','Updates','Privacy','AI','UX','Bloatware','Restore')) {
@@ -411,7 +415,10 @@ try {
             "Run '$description'? This may change system settings. Type YES to continue"
         }
         $expected = if ($UpdateMode -eq 'Lockdown' -and $Action -in @('All','Updates')) { 'LOCKDOWN' } else { 'YES' }
-        if ((Read-Host $prompt) -cne $expected) { Write-Status 'Cancelled.' Warning; exit 0 }
+        if ((Read-Host $prompt) -cne $expected) {
+            Write-Status 'Cancelled.' Warning
+            return
+        }
     }
     switch ($Action) {
         'Menu' { Show-Menu }
@@ -422,5 +429,5 @@ try {
     if (-not $WhatIfPreference) { Save-Backup }
 } catch {
     Write-Status $_.Exception.Message Error
-    exit 1
+    Write-Error $_
 }
